@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f0f2f5;
+        }
+        .container {
+            text-align: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+        img {
+            width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+        .image-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+        }
+        .image-container img {
+            flex: 1;
+            margin: 0 5px; /* Space between images */
+            max-width: 48%; /* Ensure images don't overflow */
+        }
+        a, button {
+            text-decoration: none;
+            color: white;
+            background-color: #007bff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+        a:hover, button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+        a:active, button:active {
+            transform: scale(0.95); /* Slightly shrink on click */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Your Sketch</h2>
+        <div class="image-container">
+            <img src="{{ original_photo_url }}" alt="Original Photo" onerror="this.onerror=null; this.src='placeholder.jpg';">
+            <img src="{{ sketch_url }}" alt="Sketch Preview" onerror="this.onerror=null; this.src='placeholder.jpg';">
+        </div>
+        <a href="{{ url_for('download_file', filename=filename) }}">Download Sketch</a>
+    </div>
+</body>
+</html>
