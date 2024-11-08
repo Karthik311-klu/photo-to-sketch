@@ -1,6 +1,7 @@
 This will easy convert the photo to Sketch
 
-![image](https://github.com/user-attachments/assets/782e1684-e14e-43dd-950d-e3244202b129)
+![image](https://github.com/user-attachments/assets/da7b765d-3545-40d8-b908-c828016dc84d)
+
 
 AFTER SKETCHING THE RESULT | CLICK ON THE LINK BELOW TO GET RESULT
 
